@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline — Ingénieure Logicielle & Agiliste</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chalk: '#FAF9F6',
+                        ink: '#111111',
+                        stone: '#6B7280',
+                        paper: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAF9F6; color: #111111; }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 6px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: #111111;
+            border: 2px solid #FAF9F6;
+            box-shadow: 0 0 0 1px #111111;
+        }
+        @media (max-width: 768px) {
+            .timeline-dot::before { left: -21px; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-ink selection:text-chalk">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full bg-chalk/90 backdrop-blur-sm border-b border-ink/10 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between text-sm font-medium">
+            <span class="font-serif text-lg tracking-wide">Caroline.</span>
+            <div class="hidden md:flex space-x-8 text-stone">
+                <a href="#profil" class="hover:text-ink transition-colors">Profil</a>
+                <a href="#expertise" class="hover:text-ink transition-colors">Expertise</a>
+                <a href="#projets" class="hover:text-ink transition-colors">Projets</a>
+                <a href="#parcours" class="hover:text-ink transition-colors">Parcours</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. PROFIL & VISION -->
+    <section id="profil" class="pt-40 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="max-w-3xl">
+            <h1 class="font-serif text-5xl md:text-6xl text-ink leading-tight mb-6">
+                Ingénieure Logicielle <br>& Facilitatrice Agile
+            </h1>
+            <p class="text-stone text-sm md:text-base leading-relaxed mb-8">
+                Cadre d'État (Catégorie A) cumulant 7 années d'expérience en ingénierie logicielle au sein du Ministère de l'Intérieur. Issue d'un parcours atypique forgé par le terrain, je possède une double culture technique (Front-End Vue.js / Backend NestJS) et méthodologique (Agilité / Produit).
+            </p>
+            <p class="text-stone text-sm md:text-base leading-relaxed">
+                Ma force réside dans ma capacité à traduire la complexité métier en interfaces accessibles, tout en facilitant l'auto-organisation, le cadrage de la valeur et l'épanouissement des équipes techniques.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. EXPERTISE TECHNIQUE & AGILITÉ -->
+    <section id="expertise" class="py-20 bg-paper border-y border-ink/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-xs tracking-widest uppercase text-stone mb-12 font-semibold">L'Atelier : Domaines d'Expertise</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Tech -->
+                <div>
+                    <h3 class="font-serif text-2xl mb-6 text-ink border-b border-ink/10 pb-4">Ingénierie & Code Propre</h3>
+                    <ul class="space-y-6">
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Écosystème Front-End & Vue.js</strong>
+                            <p class="text-sm text-stone leading-relaxed">Expertise confirmée sur Vue 3, Composition API, Pinia/Vuex, Vue Router et Nuxt.js.</p>
+                        </li>
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Backend & CI/CD</strong>
+                            <p class="text-sm text-stone leading-relaxed">Conception d'APIs avec NestJS, Prisma (ORM) et PostgreSQL. Déploiement et intégration continue (CI/CD).</p>
+                        </li>
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Qualité, Tests & Architecture</strong>
+                            <p class="text-sm text-stone leading-relaxed">Maîtrise de la Clean Architecture, TDD, et automatisation des tests (Jest, Cypress, Mocha).</p>
+                        </li>
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Design, RGAA & Eco-conception</strong>
+                            <p class="text-sm text-stone leading-relaxed">Sensibilité UI/UX, intégration pixel-perfect, respect strict du RGAA (Accessibilité) et Green IT.</p>
+                        </li>
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">IA & Prompt Engineering</strong>
+                            <p class="text-sm text-stone leading-relaxed">Pratique avancée des LLM (Copilot) pour la rétro-ingénierie, le refactoring assisté, la conception d'architecture et l'optimisation du code.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Agilité -->
+                <div>
+                    <h3 class="font-serif text-2xl mb-6 text-ink border-b border-ink/10 pb-4">Produit & Facilitation Agile</h3>
+                    <ul class="space-y-6">
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Product Owner / Proxy PO</strong>
+                            <p class="text-sm text-stone leading-relaxed">Investigation métier, cartographie des parcours utilisateurs (User Journeys), découpage fonctionnel et rédaction millimétrée de User Stories (BDD/Gherkin).</p>
+                        </li>
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Scrum Master</strong>
+                            <p class="text-sm text-stone leading-relaxed">Animation experte des rituels (Daily, Planning, Rétro), levée pragmatique des bloqueurs techniques et protection de la vélocité de l'équipe.</p>
+                        </li>
+                        <li>
+                            <strong class="block text-sm text-ink mb-1">Agilité à l'échelle</strong>
+                            <p class="text-sm text-stone leading-relaxed">Pratique du framework SAFe, préparation et animation de PI Planning, synchronisation transverse entre pôles d'ingénierie et directions métiers.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROJETS (MINISTÈRE DE L'INTÉRIEUR) -->
+    <section id="projets" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-xs tracking-widest uppercase text-stone font-semibold">Projets Publics & Systèmes Critiques</h2>
+            <span class="text-sm font-serif text-ink">2019 — 2026</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Candilib -->
+            <div class="bg-paper p-6 border border-ink/10 rounded-sm hover:border-ink/30 transition-colors">
+                <h3 class="font-serif text-xl mb-2">Candilib</h3>
+                <p class="text-xs uppercase tracking-wider text-stone mb-4">Plateforme de réservation nationale</p>
+                <p class="text-sm text-stone leading-relaxed">Développement de la plateforme nationale de réservation de permis de conduire. Gestion d'un fort trafic citoyen et exigence absolue sur l'accessibilité (RGAA).</p>
+            </div>
+
+            <!-- PSIJ -->
+            <div class="bg-paper p-6 border border-ink/10 rounded-sm hover:border-ink/30 transition-colors">
+                <h3 class="font-serif text-xl mb-2">PSIJ</h3>
+                <p class="text-xs uppercase tracking-wider text-stone mb-4">Système d'information sécurisé</p>
+                <p class="text-sm text-stone leading-relaxed">Développement d'infrastructures et d'interfaces applicatives hautement sécurisées destinées à la Police Judiciaire.</p>
+            </div>
+
+            <!-- REFAPP -->
+            <div class="bg-paper p-6 border border-ink/10 rounded-sm hover:border-ink/30 transition-colors">
+                <h3 class="font-serif text-xl mb-2">REFAPP</h3>
+                <p class="text-xs uppercase tracking-wider text-stone mb-4">Référentiel des applications</p>
+                <p class="text-sm text-stone leading-relaxed">Création, maintenance et évolution du catalogue recensant l'écosystème applicatif du Ministère de l'Intérieur. Conception d'APIs robustes et UI critique.</p>
+            </div>
+
+            <!-- Basegun -->
+            <div class="bg-paper p-6 border border-ink/10 rounded-sm hover:border-ink/30 transition-colors">
+                <h3 class="font-serif text-xl mb-2">Basegun</h3>
+                <p class="text-xs uppercase tracking-wider text-stone mb-4">Reconnaissance d'armes mobile</p>
+                <p class="text-sm text-stone leading-relaxed">Maintenance du Front-End mobile (réactivité extrême pour conditions de crise de terrain) et web scraping automatisé via Python pour l'alimentation des datasets d'images.</p>
+            </div>
+
+            <!-- Bibliothèque Numérique -->
+            <div class="bg-paper p-6 border border-ink/10 rounded-sm hover:border-ink/30 transition-colors">
+                <h3 class="font-serif text-xl mb-2">Bibliothèque Numérique</h3>
+                <p class="text-xs uppercase tracking-wider text-stone mb-4">Cadrage Agile Transverse</p>
+                <p class="text-sm text-stone leading-relaxed">Pilotage des rituels agiles, coordination et facilitation pour l'écosystème de partage documentaire de l'administration publique.</p>
+            </div>
+
+            <!-- Mentorat -->
+            <div class="bg-paper p-6 border border-ink/10 rounded-sm hover:border-ink/30 transition-colors">
+                <h3 class="font-serif text-xl mb-2">Projet Mentorat</h3>
+                <p class="text-xs uppercase tracking-wider text-stone mb-4">Étude d'impact & UX</p>
+                <p class="text-sm text-stone leading-relaxed">Investigation utilisateur (avec l'équipe UX), étude d'impact globale et investigation/benchmarking de solutions logicielles sur étagère pour l'accompagnement collaboratif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PARCOURS (TIMELINE) -->
+    <section id="parcours" class="py-20 bg-paper border-t border-ink/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-xs tracking-widest uppercase text-stone mb-12 font-semibold">Fresque de Vie : 2005 - 2026</h2>
+            
+            <div class="border-l-2 border-ink/10 pl-6 md:pl-8 space-y-12 ml-2 md:ml-4">
+                
+                <!-- 2019-2026 -->
+                <div class="relative timeline-dot">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ink block mb-1">2019 — 2026</span>
+                    <h3 class="font-serif text-xl text-ink mb-2">Ministère de l'Intérieur / DNUM</h3>
+                    <p class="text-sm font-medium text-stone mb-2">Ingénierie & Agilité</p>
+                    <p class="text-sm text-stone leading-relaxed">Conception d'architectures applicatives d'intérêt général et pilotage de projets agiles critiques (Candilib, PSIJ, REFAPP, Basegun).</p>
+                </div>
+
+                <!-- 2019 -->
+                <div class="relative timeline-dot">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ink block mb-1">2019</span>
+                    <h3 class="font-serif text-xl text-ink mb-2">Diplôme Universitaire (Bac+2)</h3>
+                    <p class="text-sm font-medium text-stone mb-2">Titre de Développeur de Média Interactif</p>
+                    <p class="text-sm text-stone leading-relaxed">Bascule réussie vers l'ingénierie logicielle, menant à une insertion immédiate et pérenne au cœur des systèmes d'information de l'État.</p>
+                </div>
+
+                <!-- 2013-2018 -->
+                <div class="relative timeline-dot">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ink block mb-1">2013 — 2018</span>
+                    <h3 class="font-serif text-xl text-ink mb-2">Parenthèse Familiale</h3>
+                    <p class="text-sm text-stone leading-relaxed">Rôle d'aidante familiale.</p>
+                </div>
+
+                <!-- 2011-2013 -->
+                <div class="relative timeline-dot">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ink block mb-1">2011 — 2013</span>
+                    <h3 class="font-serif text-xl text-ink mb-2">Universal Music Publishing</h3>
+                    <p class="text-sm font-medium text-stone mb-2">Assistante de Manager</p>
+                    <p class="text-sm text-stone leading-relaxed">Gestion, support et organisation administrative dans un environnement exigeant.</p>
+                </div>
+
+                <!-- 2010 -->
+                <div class="relative timeline-dot">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ink block mb-1">2010</span>
+                    <h3 class="font-serif text-xl text-ink mb-2">Reprise Académique</h3>
+                    <p class="text-sm font-medium text-stone mb-2">DAEU (Équivalence Bac)</p>
+                    <p class="text-sm text-stone leading-relaxed">Seconde chance académique assumée, validant une réorientation rigoureuse vers les filières analytiques.</p>
+                </div>
+
+                <!-- 2005-2011 -->
+                <div class="relative timeline-dot">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-ink block mb-1">2005 — 2011</span>
+                    <h3 class="font-serif text-xl text-ink mb-2">Le Terrain</h3>
+                    <p class="text-sm text-stone leading-relaxed">Série d'emplois formateurs : Opératrice d'attraction (Parc Astérix), équipière polyvalente (McDonald's), agent d'entretien municipal (Mairie de Ribécourt), animatrice de centre de vacances.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTÉRÊTS & FOOTER -->
+    <footer class="bg-chalk py-12 border-t border-ink/5 mt-10">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-xs tracking-widest uppercase text-stone mb-6 font-semibold">Centres d'intérêt</h2>
+            <div class="flex flex-wrap justify-center gap-3 mb-16">
+                <span class="px-4 py-2 border border-ink/10 rounded-full text-xs text-ink">Photographie (Cadrage)</span>
+                <span class="px-4 py-2 border border-ink/10 rounded-full text-xs text-ink">Peinture (Composition)</span>
+                <span class="px-4 py-2 border border-ink/10 rounded-full text-xs text-ink">Poésie (Syntaxe)</span>
+                <span class="px-4 py-2 border border-ink/10 rounded-full text-xs text-ink">Jardinage</span>
+                <span class="px-4 py-2 border border-ink/10 rounded-full text-xs text-ink">Roller</span>
+            </div>
+            
+            <p class="text-[10px] uppercase tracking-widest text-stone">
+                © 2026 Caroline • Ingénierie logicielle & Agilité.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
