@@ -1,0 +1,22 @@
+{
+  "name": "madebycaroline-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .ts,.vue src",
+    "test:accessibility": "pa11y-ci"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "vite": "^5.0.0",
+    "vue": "^3.4.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "eslint-plugin-vuejs-accessibility": "^2.5.0",
+    "pa11y-ci": "^6.0.0"
+  }
+}

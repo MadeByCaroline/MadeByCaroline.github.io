@@ -1,0 +1,8 @@
+{
+  "urls": [
+    "http://localhost:5173/"
+  ],
+  "default": {
+    "timeout": 30000
+  }
+}
