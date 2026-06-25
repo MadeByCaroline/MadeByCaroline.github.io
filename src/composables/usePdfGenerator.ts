@@ -135,13 +135,6 @@ export function usePdfGenerator() {
           doc.text(lines, margin + 6, y)
           y += lines.length * 4.5
         }
-
-        if (category.note) {
-          y = addWrappedText(`→ ${category.note}`, margin + 2, y, contentWidth - 4, {
-            fontSize: 8,
-            color: '#777777',
-          })
-        }
         y += 2
       }
 
