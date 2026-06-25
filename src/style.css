@@ -1,0 +1,25 @@
+/* Comportement de défilement fluide */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Réinitialisation minimale */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Suppression des marges par défaut sur les titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
