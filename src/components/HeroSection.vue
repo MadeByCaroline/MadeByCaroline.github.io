@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { contactInfo } from '../data/cv-data'
+
+function exportToPDF(): void {
+  window.print()
+}
 </script>
 
 <template>
@@ -50,6 +54,10 @@ import { contactInfo } from '../data/cv-data'
       <a :href="contactInfo.cvFile.href" class="cv-download-link" download>
         {{ contactInfo.cvFile.label }}
       </a>
+
+      <button class="cv-print-button" @click="exportToPDF">
+        Enregistrer mon CV en PDF
+      </button>
     </div>
   </section>
 </template>
@@ -142,6 +150,30 @@ import { contactInfo } from '../data/cv-data'
 }
 
 .cv-download-link:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.cv-print-button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid #111111;
+  background-color: transparent;
+  color: #111111;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: 0.75rem;
+}
+
+.cv-print-button:hover {
+  background-color: #111111;
+  color: #faf9f6;
+}
+
+.cv-print-button:focus-visible {
   outline: 2px solid #111111;
   outline-offset: 2px;
 }

@@ -69,4 +69,88 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* ─── Styles d'impression (PDF / @media print) ─── */
+@page {
+  margin: 1cm;
+}
+
+@media print {
+  /* Masquer les éléments non pertinents sur un CV papier */
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .cv-print-button {
+    display: none !important;
+  }
+
+  /* Réinitialiser les couleurs de fond et passer le texte en noir */
+  body,
+  .hero-section,
+  .expertise-section,
+  .projects-section,
+  .parcours-section,
+  .experience-card,
+  .project-card,
+  .expertise-category {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Largeur pleine page pour le contenu principal */
+  .main-content,
+  .hero-inner,
+  .expertise-inner,
+  .projects-inner,
+  .parcours-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Réduire les espacements verticaux */
+  .hero-section,
+  .expertise-section,
+  .projects-section,
+  .parcours-section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Éviter les sauts de page à l'intérieur des blocs d'expérience et de projets */
+  .experience-list-item,
+  .experience-card,
+  .project-item,
+  .project-card,
+  .expertise-category {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Afficher les URL des liens de contact après leur texte */
+  .contact-link::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  /* Forcer les couleurs de texte pour les éléments secondaires */
+  .hero-text,
+  .contact-list,
+  .experience-role,
+  .experience-dates,
+  .experience-description,
+  .experience-details,
+  .project-description,
+  .project-details,
+  .section-title,
+  .category-note,
+  .skill-item {
+    color: #333333 !important;
+  }
+}
 </style>
