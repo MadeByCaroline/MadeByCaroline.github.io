@@ -50,10 +50,6 @@ const { isLoading, generatePDF } = usePdfGenerator()
         </li>
       </ul>
 
-      <a :href="contactInfo.cvFile.href" class="cv-download-link" download>
-        {{ contactInfo.cvFile.label }}
-      </a>
-
       <button
         class="cv-print-button"
         :disabled="isLoading"
