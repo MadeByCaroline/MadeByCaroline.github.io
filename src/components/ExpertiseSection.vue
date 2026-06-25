@@ -17,7 +17,6 @@ import { skillCategories } from '../data/cv-data'
             </li>
           </ul>
 
-          <p class="category-note">{{ category.note }}</p>
         </div>
       </div>
     </div>
