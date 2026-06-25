@@ -5,7 +5,6 @@ export interface Skill {
 export interface SkillCategory {
   title: string
   skills: Skill[]
-  note: string
 }
 
 export interface Project {
