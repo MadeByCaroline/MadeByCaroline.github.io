@@ -38,8 +38,8 @@ export const skillCategories: SkillCategory[] = [
       { label: "Backend : NestJS, Prisma, PostgreSQL" },
       { label: "Tests : Jest, Cypress, TDD" },
       { label: "RGAA, accessibilité, performance" },
+      { label: "Utilisation avancée des LLM pour accélérer les cycles de développement : génération de tests, assistance au refactoring et documentation technique."},
     ],
-    note: "Utilisation avancée des LLM pour accélérer les cycles de développement : génération de tests, assistance au refactoring et documentation technique.",
   },
   {
     title: "Produit & Collaboration",
@@ -48,8 +48,8 @@ export const skillCategories: SkillCategory[] = [
       { label: "Contribution PO / Scrum dans des équipes produit" },
       { label: "Animation de rituels et coordination transverse" },
       { label: "Analyse utilisateur et cadrage fonctionnel" },
+      { label: "Approche produit orientée valeur et compréhension métier dans des environnements publics complexes."},
     ],
-    note: "Approche produit orientée valeur et compréhension métier dans des environnements publics complexes.",
   },
 ]
 
