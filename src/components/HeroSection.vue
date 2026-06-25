@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { contactInfo } from '../data/cv-data'
+import { usePdfGenerator } from '../composables/usePdfGenerator'
 
-function exportToPDF(): void {
-  window.print()
-}
+const { isLoading, generatePDF } = usePdfGenerator()
 </script>
 
 <template>
@@ -55,8 +54,14 @@ function exportToPDF(): void {
         {{ contactInfo.cvFile.label }}
       </a>
 
-      <button class="cv-print-button" @click="exportToPDF">
-        Enregistrer mon CV en PDF
+      <button
+        class="cv-print-button"
+        :disabled="isLoading"
+        :aria-busy="isLoading"
+        @click="generatePDF"
+      >
+        <span v-if="isLoading" aria-live="polite">Génération en cours…</span>
+        <span v-else>Télécharger le CV (PDF, ~150&nbsp;Ko)</span>
       </button>
     </div>
   </section>
@@ -176,5 +181,10 @@ function exportToPDF(): void {
 .cv-print-button:focus-visible {
   outline: 2px solid #111111;
   outline-offset: 2px;
+}
+
+.cv-print-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 </style>
