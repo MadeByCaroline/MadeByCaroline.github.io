@@ -66,6 +66,15 @@ export const projects: Project[] = [
     tags: ["Produit en solo", "Nuxt & Prisma", "En production"],
   },
   {
+    id: "indikeo",
+    title: "Indikeo",
+    description:
+      "Conception, développement assisté par IA et mise en ligne en solo d'une plateforme d'apport d'affaires pour les agences immobilières : les apporteurs recommandent un contact depuis leur téléphone ou leur ordinateur, l'agence suit chaque dossier et ne paie la commission qu'une fois ses honoraires encaissés.",
+    details:
+      "Plateforme multi-agences : chaque agence a son espace, ses couleurs et ses règles, invite ses apporteurs par QR code, valide leurs comptes, suit les dossiers, échange par messagerie et calcule la commission. Types de recommandation, étapes et vocabulaire configurables pour d'autres métiers (courtage, crédit). Authentification Keycloak avec double authentification, isolation des données par agence (sécurité par lignes PostgreSQL), IBAN chiffrés, abonnement Stripe, RGPD, écoconception, plus de 400 tests automatisés, déploiement Docker sur VPS. Développé avec assistance IA. En bêta, en ligne sur indikeo.fr.",
+    tags: ["Produit en solo", "NestJS, Vue & Prisma", "En bêta"],
+  },
+  {
     id: "candilib",
     title: "Candilib",
     description:
