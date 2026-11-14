@@ -35,8 +35,10 @@ export const skillCategories: SkillCategory[] = [
       { label: "Vue 3, TypeScript, Composition API, Nuxt" },
       { label: "Architecture front-end et structuration applicative" },
       { label: "Backend : NestJS, Prisma, PostgreSQL" },
-      { label: "Tests : Jest, Cypress, TDD" },
+      { label: "Tests : Jest, Cypress, Vitest, TDD" },
       { label: "RGAA, accessibilité, performance" },
+      { label: "Mise en production : Docker, VPS, Stripe, stockage S3, supervision" },
+      { label: "Sécurité applicative et RGPD : double authentification, CSP, conservation des données" },
       { label: "Utilisation avancée des LLM pour accélérer les cycles de développement : génération de tests, assistance au refactoring et documentation technique."},
     ],
   },
@@ -47,12 +49,22 @@ export const skillCategories: SkillCategory[] = [
       { label: "Contribution PO / Scrum dans des équipes produit" },
       { label: "Animation de rituels et coordination transverse" },
       { label: "Analyse utilisateur et cadrage fonctionnel" },
+      { label: "Création et lancement d'un produit en solo : offres et tarification, conformité légale, communication" },
       { label: "Approche produit orientée valeur et compréhension métier dans des environnements publics complexes."},
     ],
   },
 ]
 
 export const projects: Project[] = [
+  {
+    id: "yeppoa",
+    title: "Yeppoa",
+    description:
+      "Conception, développement assistée par IA et mise en production en solo d'un service de partage de photos d'événements : les invités scannent un QR code et envoient leurs photos, sans compte ni application.",
+    details:
+      "Défis photo, palmarès voté par les invités et projection en direct sur grand écran. Paiement Stripe, stockage S3, RGPD, accessibilité et sécurité (double authentification, CSP), 200 tests automatisés, déploiement Docker sur VPS. Développé avec assistance IA. En ligne sur yeppoa.fr.",
+    tags: ["Produit en solo", "Nuxt & Prisma", "En production"],
+  },
   {
     id: "candilib",
     title: "Candilib",
@@ -109,12 +121,25 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
+    id: "studio-14",
+    organization: "Le Studio 14",
+    role: "Fondatrice — studio de développement indépendant",
+    startDate: "2026",
+    endDate: null,
+    startDatetime: "2026-11",
+    endDatetime: null,
+    description:
+      "Studio où je conçois et développe mes propres produits, en parallèle de mon poste : de l'idée à la mise en ligne, en passant par le développement, le paiement, la conformité et la communication.",
+    details:
+      "Yeppoa (galerie photo d'événements, en ligne), Indikeo (apport d'affaires immobilier, en bêta), Ludoudoux (jeux pour les 3-6 ans, en développement), Galerie Modèle (galerie d'art en 3D, en réflexion). En ligne sur lestudio14.dev.",
+  },
+  {
     id: "dnum",
     organization: "Ministère de l'Intérieur / DNUM",
     role: "Ingénierie logicielle & produit",
     startDate: "2018",
     endDate: null,
-    startDatetime: "2018-09",
+    startDatetime: "2019-04",
     endDatetime: null,
     description:
       "Développement de produits numériques publics au sein de la Direction Numérique du Ministère de l'Intérieur.",
